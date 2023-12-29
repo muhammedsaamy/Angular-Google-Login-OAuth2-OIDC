@@ -61,11 +61,11 @@ export class GoogleApiService {
    }
 
    emails(userId: string){
-    return this.httpClient.get(`${Constants.GMAIL_BASE_URL}/gmail/v1/users/${userId}/messages`, { headers: this.authHeader() })
+    return this.httpClient.get<any>(`${Constants.GMAIL_BASE_URL}/gmail/v1/users/${userId}/messages`, { headers: this.authHeader() })
   }
 
   getMail(userId: string, mailId: string) {
-    return this.httpClient.get(`${Constants.GMAIL_BASE_URL}/gmail/v1/users/${userId}/messages/${mailId}`, { headers: this.authHeader() })
+    return this.httpClient.get<any>(`${Constants.GMAIL_BASE_URL}/gmail/v1/users/${userId}/messages/${mailId}`, { headers: this.authHeader() })
   }
 
   isLoggedIn(): boolean {

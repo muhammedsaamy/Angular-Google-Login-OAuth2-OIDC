@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { RootComponent } from './feature-modules/root/root.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RootComponent
   ],
   imports: [
     BrowserModule,
