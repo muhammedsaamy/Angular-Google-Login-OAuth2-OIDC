@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { RootComponent } from './feature-modules/root/root.component';
+import { interceptorProviders } from './core/interceptors';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { RootComponent } from './feature-modules/root/root.component';
     HttpClientModule,
     OAuthModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    interceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
